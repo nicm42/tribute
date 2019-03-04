@@ -1,0 +1,22 @@
+body{
+	font-family: sans-serif;
+}
+
+header{
+	text-align: center;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+}
+
+.timeline{
+	display: flex;
+}
+
+.games{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
