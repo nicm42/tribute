@@ -4,19 +4,54 @@ body{
 
 header{
 	text-align: center;
+	color: hsl(197, 100%, 29%);
+}
+
+#header-image{
+	max-height: 200px;
 }
 
 nav{
 	display: flex;
 	justify-content: space-around;
+	background-color: hsl(197, 100%, 78%);
+	margin: 5px 0px 5px 0px;
+}
+
+footer{
+	background-color: hsl(197, 100%, 78%);
+	margin-top: 5px;
 }
 
 .timeline{
 	display: flex;
 }
 
+#timeline{
+	border: 1px solid hsl(197, 100%, 29%);
+	padding: 5px;
+}
+
+#timeline-info{
+	padding: 5px;
+}
+
+/* put these in a grid so they are min 300px wide, but otherwise fill the row/column */
 .games{
 	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-rows: repeat(auto-fit, 1fr);
+	grid-gap: 2px;
+}
+
+h4{
+	color: hsl(197, 100%, 29%);	
+}
+
+/* set colour of each game to be alternating */
+.game:nth-child(1n){
+	background-color: hsl(197, 100%, 90%);
+}
+.game:nth-child(2n){
+	background-color: hsl(197, 100%, 95%);
 }
