@@ -25,11 +25,24 @@ footer{
 
 .timeline{
 	display: flex;
+	margin-bottom: 5px;
 }
 
 #timeline{
 	border: 1px solid hsl(197, 100%, 29%);
+	padding: 5px 5px 5px 0px;
+}
+#timeline li{
 	padding: 5px;
+	border-left: 1px solid black;
+	padding-left: 0px;
+	list-style-type: none;
+}
+#timeline li:nth-of-type(3){
+	padding-top: 15px;
+}
+#timeline li:nth-of-type(5){
+	padding-top: 15px;
 }
 
 #timeline-info{
