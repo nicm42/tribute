@@ -1,16 +1,15 @@
+/* set the font for the whole thing */
 body{
 	font-family: sans-serif;
 }
 
+/* centre the header text and make it a dark version of the blue used for the page */
 header{
 	text-align: center;
 	color: hsl(197, 100%, 29%);
 }
 
-#header-image{
-	max-height: 200px;
-}
-
+/* make the navigation flex and space it out */
 nav{
 	display: flex;
 	justify-content: space-around;
@@ -18,11 +17,13 @@ nav{
 	margin: 5px 0px 5px 0px;
 }
 
+/* make the footer the same background colour as the header */
 footer{
 	background-color: hsl(197, 100%, 78%);
 	margin-top: 5px;
 }
 
+/* make the timeline flex with some borders and padding where necessary*/
 .timeline{
 	display: flex;
 	margin-bottom: 5px;
@@ -31,20 +32,21 @@ footer{
 #timeline{
 	border: 1px solid hsl(197, 100%, 29%);
 	padding: 5px 5px 5px 0px;
+	margin-right: 5px;
 }
 #timeline li{
 	padding: 5px;
-	border-left: 1px solid black;
-	padding-left: 0px;
-	list-style-type: none;
 }
+/* there is a bigger gap in time before these two elements, so make a big more space between thoe bullet points */
 #timeline li:nth-of-type(3){
 	padding-top: 15px;
 }
 #timeline li:nth-of-type(5){
 	padding-top: 15px;
 }
-
+#timeline-image{
+	margin-right: 5px;
+}
 #timeline-info{
 	padding: 5px;
 }
@@ -56,15 +58,18 @@ footer{
 	grid-template-rows: repeat(auto-fit, 1fr);
 	grid-gap: 2px;
 }
-
+/* make space between the text and the borders here */
+.game{
+	padding: 2px;
+}
+/* change the heading for the games to be the same colour as the overall header */
 h4{
 	color: hsl(197, 100%, 29%);	
 }
-
 /* set colour of each game to be alternating */
 .game:nth-child(1n){
-	background-color: hsl(197, 100%, 90%);
+	border: 1px solid hsl(197, 100%, 50%);
 }
 .game:nth-child(2n){
-	background-color: hsl(197, 100%, 95%);
+	border: 1px solid hsl(197, 100%, 25%);
 }
