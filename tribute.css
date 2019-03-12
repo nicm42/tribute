@@ -1,6 +1,14 @@
 /* set the font for the whole thing */
 body{
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* set the link colours */
+a{
+	color: #333333;
+}
+a:visited{
+	color: #666666;
 }
 
 /* centre the header text and make it a dark version of the blue used for the page */
@@ -49,6 +57,20 @@ footer{
 }
 #timeline-info{
 	padding: 5px;
+}
+
+/* make the teams display flex */
+.teams{
+	display: flex;
+	margin: 5px;
+	justify-content: center;
+	align-items: center;
+}
+#team1{
+	margin=right: 5px;
+}
+#team2{
+	margin-left: 5px;
 }
 
 /* put these in a grid so they are min 300px wide, but otherwise fill the row/column */
