@@ -63,20 +63,18 @@ footer{
 .teams{
 	display: flex;
 	margin: 5px;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
-#team1{
-	margin=right: 5px;
-}
-#team2{
-	margin-left: 5px;
+/* shrink the photos so they nicely on screen */
+.teams img{
+	max-width: 100%;
 }
 
 /* put these in a grid so they are min 300px wide, but otherwise fill the row/column */
 .games{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-template-rows: repeat(auto-fit, 1fr);
 	grid-gap: 2px;
 }
@@ -87,6 +85,7 @@ footer{
 /* change the heading for the games to be the same colour as the overall header */
 h4{
 	color: hsl(197, 100%, 29%);	
+	text-align: center;
 }
 /* set colour of each game to be alternating */
 .game:nth-child(1n){
@@ -94,4 +93,20 @@ h4{
 }
 .game:nth-child(2n){
 	border: 1px solid hsl(197, 100%, 25%);
+}
+
+/* mobile bits */
+@media (max-width: 641px){ 
+	nav{
+		flex-direction: column; /* make the navigation vertical to fit it in */
+		align-items: center;
+	}
+	.timeline{
+		flex-wrap: wrap; /* wrap the timeline bits, so they fit in */
+		justify-content: center;
+	}
+	.teams{
+		flex-direction: column; /* put the photos one below the other */
+		align-items: center;
+	}
 }
