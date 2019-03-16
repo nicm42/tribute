@@ -1,6 +1,13 @@
 /* set the font for the whole thing */
 body{
 	font-family: 'Open Sans', sans-serif;
+	background-color: hsl(192, 75%, 76%);
+}
+#everything{
+	width: 95%;
+	margin: 10px auto 10px auto;
+	background-color: white;
+	border-radius: 15px;
 }
 
 /* set the link colours */
@@ -14,20 +21,20 @@ a:visited{
 /* centre the header text and make it a dark version of the blue used for the page */
 header{
 	text-align: center;
-	color: hsl(197, 100%, 29%);
+	color: hsl(192, 75%, 36%);
 }
 
 /* make the navigation flex and space it out */
 nav{
 	display: flex;
 	justify-content: space-around;
-	background-color: hsl(197, 100%, 78%);
+	background-color: hsl(192, 75%, 76%);
 	margin: 5px 0px 5px 0px;
 }
 
 /* make the footer the same background colour as the header */
 footer{
-	background-color: hsl(197, 100%, 78%);
+	background-color: hsl(192, 75%, 76%);
 	margin-top: 5px;
 }
 
@@ -35,12 +42,15 @@ footer{
 .timeline{
 	display: flex;
 	margin-bottom: 5px;
+	padding: 0px 5px 0px 5px;
 }
 
 #timeline{
-	border: 1px solid hsl(197, 100%, 29%);
-	padding: 5px 5px 5px 0px;
+	border: 1px solid hsl(192, 75%, 26%);
+	padding: 5px 5px 5px 5px;
 	margin-right: 5px;
+	background-color: hsl(192, 75%, 60%);
+	background-image: linear-gradient(to bottom, hsl(192, 75%, 95%), hsl(192, 75%, 60%));
 }
 #timeline li{
 	padding: 5px;
@@ -52,23 +62,43 @@ footer{
 #timeline li:nth-of-type(5){
 	padding-top: 15px;
 }
-#timeline-image{
-	margin-right: 5px;
-}
-#timeline-info{
+#timeline-text{
 	padding: 5px;
+	opacity: 0.8;
+	filter: alpha(opacity = 80); /* For IE8 and older */
+	margin: 10px;
+	background-color: white;
+}
+/* add the ISIHAC logo as a slightly transparent background image */
+#timeline-info{
+	background-image: url("clue.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
-/* make the teams display flex */
+/* make the teams display flex and add a background gradient */
 .teams{
 	display: flex;
 	margin: 5px;
 	justify-content: space-between;
 	align-items: center;
+	font-size: 0.9em;
+	font-family: 'Kalam', cursive;
+	text-align: center;
+	background-color: hsl(192, 75%, 76%);
+	background-image: radial-gradient(hsl(192, 75%, 36%), hsl(192, 75%, 86%));
 }
-/* shrink the photos so they nicely on screen */
+/* shrink the photos so they fit nicely on screen */
 .teams img{
 	max-width: 100%;
+	object-fit: cover;
+}
+/* put a border around the photo and caption with a box shadow */
+.team-photo{
+	border: 1px solid hsl(192, 75%, 26%);
+	border-radius: 6px;
+	padding: 5px;
+	box-shadow: 0 0 5px #666666;
 }
 
 /* put these in a grid so they are min 300px wide, but otherwise fill the row/column */
@@ -77,22 +107,28 @@ footer{
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-template-rows: repeat(auto-fit, 1fr);
 	grid-gap: 2px;
+	padding: 0px 5px 0px 5px;
 }
 /* make space between the text and the borders here */
 .game{
 	padding: 2px;
+	background-color: #ffffff;
 }
 /* change the heading for the games to be the same colour as the overall header */
 h4{
-	color: hsl(197, 100%, 29%);	
+	color: hsl(192, 75%, 40%);	
 	text-align: center;
 }
 /* set colour of each game to be alternating */
 .game:nth-child(1n){
-	border: 1px solid hsl(197, 100%, 50%);
+	border: 1px solid hsl(192, 75%, 50%);
+	background-color: hsl(192, 75%, 50%);
+	background-image: linear-gradient(to bottom, hsl(192, 75%, 100%) 30%, hsl(192, 75%, 70%));
 }
 .game:nth-child(2n){
-	border: 1px solid hsl(197, 100%, 25%);
+	border: 1px solid hsl(192, 75%, 25%);
+	background-color: hsl(192, 75%, 25%);
+	background-image: linear-gradient(to bottom, hsl(192, 75%, 95%) 30%, hsl(192, 75%, 60%));
 }
 
 /* mobile bits */
